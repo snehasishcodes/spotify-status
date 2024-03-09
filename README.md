@@ -31,7 +31,7 @@ The complete step-by-step process is given below.
 Go to https://spotify-status-api.onrender.com/login and login to the API using your Spotify Account.
 
 <p align="center">
-    <img src="https://i.imgur.com/JVs3ze3.png" alt="spotify authorization" height="198" width="171" />
+    <img src="https://i.imgur.com/JVs3ze3.png" alt="spotify authorization" height="342" width="396" />
 </p>
 
 
