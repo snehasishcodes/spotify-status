@@ -30,12 +30,28 @@ The complete step-by-step process is given below.
 
 Go to https://spotify-status-api.onrender.com/login and login to the API using your Spotify Account.
 
+It asks for the following permissions:
+- Your email address (always kept private)
+- Subscription type, country and explicit content filter (always kept private)
+- Display name, username, profile picture, followers and public playlists (only display name, username, profile picture is shared)
+- Recently played tracks and artists (shared in the `/users/:id/recents` endpoint)
+- Currently playing track (shared in the `/users/:id/status` endpoint)
+- Top artists and tracks (shared in the `/users/:id/top/:type` endpoint)
+
+We do not ask for any private permissions. You can check the permissions in the authorization page itself.
+
 <p align="center">
     <img src="https://i.imgur.com/JVs3ze3.png" alt="spotify authorization" />
 </p>
 
 
+### Step 2 - Grab your Spotify User ID
+You will be automatically redirected to your Spotify User Profile information endpoint, immediately after the authorization/login has been successful.
+Grab your Spotify User ID from there. We will use the ID to access other endpoints from now on.
 
+<p align="center">
+    <img src="https://i.imgur.com/9ubHh7t_d.webp?maxwidth=760&fidelity=grand" alt="user information" />
+</p>
 
 
 
