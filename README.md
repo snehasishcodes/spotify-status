@@ -5,7 +5,7 @@
 
 # Spotify Status
 
-Expose your currently playing track on Spotify, alongside Spotify profile, recently played tracks and top items, to a public API. You can then use the API to grab the information without having to authenticate any further. This minimizes the pain-in-the-ass to work with Spotify Authorization and thus all you need is your Spotify User ID.
+Expose your currently playing track on Spotify, alongside Spotify profile, recently played tracks and top items, to a public API. You can then use the API to grab the information without having to authenticate any further. This minimizes the pain-in-the-ass to work with Spotify Authorization and thus all you need is your Spotify User ID. (Not open source)
 
 
 ### Base URL
@@ -28,7 +28,7 @@ The complete step-by-step process is given below.
 
 ### Step 1 - Login to the API
 
-Go to https://spotify-status-api.onrender.com/login and login to the API using your Spotify Account.
+Go to https://spotify-status-api.onrender.com/login and login to the API using your Spotify Account. We handle the rest of authentication, like: periodically refreshing your access token after it has expired and stuff.
 
 It asks for the following permissions:
 - Your email address (always kept private)
@@ -45,7 +45,7 @@ We do not ask for any private permissions. You can check the permissions in the 
 </p>
 
 
-### Step 2 - Grab your Spotify User ID
+### Step 2 - Grab your Spotify User ID [#step-2]
 You will be automatically redirected to your Spotify User Profile information endpoint, immediately after the authorization/login has been successful.
 Grab your Spotify User ID from there. We will use the ID to access other endpoints from now on.
 
@@ -54,7 +54,17 @@ Grab your Spotify User ID from there. We will use the ID to access other endpoin
 </p>
 
 
+### Step 3 - Just send the GET requests! ez right?
+Once you have grabbed your Spotify account user ID, you just need to send the required `GET` requests to our endpoints. 
 
+**E N D P O I N T S**
+
+1. Get Profile Information
+> ```
+> GET /users/[USER_ID]
+> ```
+> Params:
+> - `[USER_ID]`: Your Spotify Account User ID. [^](#step2)
 
 
 
