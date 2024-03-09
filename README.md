@@ -118,7 +118,10 @@ Once you have grabbed your Spotify account user ID, you just need to send the re
 
 That's it lol. GGEZ!
 
-### Made with 💗 and 💻 by [@sneh](https://sneh.is-a.dev) - [☕ Ko-fi](https://ko-fi.com/snehasishlol)
+### [🍜 Buy me a Ramen](https://buymeacoffee.com/snehasish)
+
+### Made with 💗 and 💻 by [@sneh](https://sneh.is-a.dev)
+
 
 
 
