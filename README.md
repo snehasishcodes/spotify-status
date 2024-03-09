@@ -114,7 +114,11 @@ Once you have grabbed your Spotify account user ID, you just need to send the re
 > Response: https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
 
 
+---
 
+That's it lol. GGEZ!
+
+### Made with 💗 and 💻 by [@sneh](https://sneh.is-a.dev) - [☕ Ko-fi](https://ko-fi.com/snehasishlol)
 
 
 
