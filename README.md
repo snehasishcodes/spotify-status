@@ -45,7 +45,7 @@ We do not ask for any private permissions. You can check the permissions in the 
 </p>
 
 
-### Step 2 - Grab your Spotify User ID [#step-2]
+### Step 2 - Grab your Spotify User ID
 You will be automatically redirected to your Spotify User Profile information endpoint, immediately after the authorization/login has been successful.
 Grab your Spotify User ID from there. We will use the ID to access other endpoints from now on.
 
@@ -59,12 +59,59 @@ Once you have grabbed your Spotify account user ID, you just need to send the re
 
 **E N D P O I N T S**
 
-1. Get Profile Information
+1. Profile Information
 > ```
 > GET /users/[USER_ID]
 > ```
+> 
 > Params:
-> - `[USER_ID]`: Your Spotify Account User ID. [^](#step2)
+> - `[USER_ID]`: Your Spotify Account User ID. [^](#step-2---grab-your-spotify-user-id)
+>
+> Response: https://developer.spotify.com/documentation/web-api/reference/get-current-users-profile
+> Note: `email`, `country`, `explicit_content`, `product` are not shared.
+
+2. Currently Playing Track
+> ```
+> GET /users/[USER_ID]/status
+> ```
+> 
+> Params:
+> - `[USER_ID]`: Your Spotify Account User ID. [^](#step-2---grab-your-spotify-user-id)
+>
+> Response: https://developer.spotify.com/documentation/web-api/reference/get-the-users-currently-playing-track
+
+3. Recently Played Tracks
+> ```
+> GET /users/[USER_ID]/recents
+> ```
+>
+> Params:
+> - `[USER_ID]`: Your Spotify Account User ID. [^](#step-2---grab-your-spotify-user-id)
+>
+> Query:
+> - `limit`: (integer) The maximum number of items to return.
+> - `after`: (integer) A Unix timestamp in milliseconds. Returns all items after (but not including) this cursor position. If `after` is specified, `before` must not be specified.
+> - `before`: (integer) A Unix timestamp in milliseconds. Returns all items before (but not including) this cursor position. If `before` is specified, `after` must not be specified.
+> 
+> Response: https://developer.spotify.com/documentation/web-api/reference/get-recently-played
+
+4. Top Tracks/Artists
+> ```
+> GET /users/[USER_ID]/top/[TYPE]
+> ```
+>
+> Params: 
+> - `[USER_ID]`: Your Spotify Account User ID. [^](#step-2---grab-your-spotify-user-id)
+> - `[TYPE]`: Must be any one of the two values:
+>   - `artists`: Get top artists
+>   - `tracks`: Get top tracks
+>
+> Query:
+> - `time_range`: (string) Over what time frame the affinities are computed. Valid values: long_term (calculated from several years of data and including all new data as it becomes available), medium_term (approximately last 6 months), short_term (approximately last 4 weeks).
+> - `limit`: (integer) The maximum number of items to return.
+> - `offset`: (integer) The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
+>
+> Response: https://developer.spotify.com/documentation/web-api/reference/get-users-top-artists-and-tracks
 
 
 
