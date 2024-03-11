@@ -10,7 +10,7 @@ Expose your currently playing track on Spotify, alongside Spotify profile, recen
 
 ### Base URL
 ```
-https://spotify-status-api.onrender.com
+https://spotify-status.snehasish.xyz
 ```
 
 Spotify Status API is hosted on [Render.com](https://render.com). The base URL is given above.
@@ -28,7 +28,7 @@ The complete step-by-step process is given below.
 
 ### Step 1 - Login to the API
 
-Go to https://spotify-status-api.onrender.com/login and login to the API using your Spotify Account. We handle the rest of authentication, like: periodically refreshing your access token after it has expired and stuff.
+Go to https://spotify-status.snehasish.xyz/login and login to the API using your Spotify Account. We handle the rest of authentication, like: periodically refreshing your access token after it has expired and stuff.
 
 It asks for the following permissions:
 - Your email address (always kept private)
@@ -120,7 +120,7 @@ That's it lol. GGEZ!
 
 ### [🍜 Buy me a Ramen](https://buymeacoffee.com/snehasish)
 
-### Made with 💗 and 💻 by [@sneh](https://sneh.is-a.dev)
+### Made with 💗 and 💻 by [@sneh](https://snehasish.xyz)
 
 
 
