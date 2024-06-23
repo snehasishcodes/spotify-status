@@ -13,7 +13,7 @@ Expose your currently playing track on Spotify, alongside Spotify profile, recen
 https://spotify-status.snehasish.xyz
 ```
 
-Spotify Status API is hosted on [Render.com](https://render.com). The base URL is given above.
+Spotify Status API is now hosted on [Vercel](https://vercel.com). The base URL is given above.
 
 ---
 
@@ -88,10 +88,7 @@ Once you have grabbed your Spotify account user ID, you just need to send the re
 > Params:
 > - `[USER_ID]`: Your Spotify Account User ID. [^](#step-2---grab-your-spotify-user-id)
 >
-> Query:
-> - `limit`: (integer) The maximum number of items to return.
-> - `after`: (integer) A Unix timestamp in milliseconds. Returns all items after (but not including) this cursor position. If `after` is specified, `before` must not be specified.
-> - `before`: (integer) A Unix timestamp in milliseconds. Returns all items before (but not including) this cursor position. If `before` is specified, `after` must not be specified.
+> Query: `[Removed]`
 > 
 > Response: https://developer.spotify.com/documentation/web-api/reference/get-recently-played
 
